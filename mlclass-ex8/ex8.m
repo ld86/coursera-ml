@@ -34,10 +34,10 @@ fprintf('Visualizing example dataset for outlier detection.\n\n');
 load('ex8data1.mat');
 
 %  Visualize the example dataset
-plot(X(:, 1), X(:, 2), 'bx');
-axis([0 30 0 30]);
-xlabel('Latency (ms)');
-ylabel('Throughput (mb/s)');
+% plot(X(:, 1), X(:, 2), 'bx');
+% axis([0 30 0 30]);
+% xlabel('Latency (ms)');
+% ylabel('Throughput (mb/s)');
 
 fprintf('Program paused. Press enter to continue.\n');
 pause
@@ -61,9 +61,9 @@ fprintf('Visualizing Gaussian fit.\n\n');
 p = multivariateGaussian(X, mu, sigma2);
 
 %  Visualize the fit
-visualizeFit(X,  mu, sigma2);
-xlabel('Latency (ms)');
-ylabel('Throughput (mb/s)');
+% visualizeFit(X,  mu, sigma2);
+% xlabel('Latency (ms)');
+% ylabel('Throughput (mb/s)');
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
@@ -84,9 +84,9 @@ fprintf('   (you should see a value epsilon of about 8.99e-05)\n\n');
 outliers = find(p < epsilon);
 
 %  Draw a red circle around those outliers
-hold on
-plot(X(outliers, 1), X(outliers, 2), 'ro', 'LineWidth', 2, 'MarkerSize', 10);
-hold off
+% hold on
+% plot(X(outliers, 1), X(outliers, 2), 'ro', 'LineWidth', 2, 'MarkerSize', 10);
+% hold off
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
